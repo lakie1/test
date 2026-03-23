@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Tidio testwebsite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssurMatch AI | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Test</h1>
-  <p>test.</p>
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6959b093a0673c197cd2addc/1je35jg0e';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <nav class="bg-blue-900 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold tracking-tight">
+                <i class="fas fa-shield-halved mr-2"></i>AssurMatch <span class="text-blue-400">AI</span>
+            </h1>
+            <div class="text-white text-sm">
+                <span class="opacity-75 text-white mr-4">Welkom, Kantoor Zonhoven</span>
+                <button class="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded text-xs font-bold transition">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-10 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="md:col-span-1 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">Nieuwe Check</h2>
+                <p class="text-gray-500 text-sm mb-6">Upload het technisch verslag of de klantfiche (PDF) voor een directe acceptatie-analyse.</p>
+                
+                <div class="border-2 border-dashed border-blue-200 rounded-lg p-10 text-center hover:border-blue-400 transition cursor-pointer bg-blue-50">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-3"></i>
+                    <p class="text-sm font-medium text-gray-700">Sleep PDF hierheen</p>
+                    <p class="text-xs text-gray-400 mt-1">of klik om te bladeren</p>
+                </div>
+
+                <button class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-lg transition flex items-center justify-center">
+                    <i class="fas fa-magic mr-2"></i> ANALYSEER DOSSIER
+                </button>
+            </div>
+
+            <div class="md:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800">Match Resultaten</h2>
+                    <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">AI LIVE</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-gray-400 text-xs uppercase tracking-wider border-b">
+                                <th class="pb-3 italic">Maatschappij</th>
+                                <th class="pb-3 italic">Match %</th>
+                                <th class="pb-3 italic">Status</th>
+                                <th class="pb-3 italic">Actie</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr>
+                                <td class="py-4 font-bold text-gray-700">AG Insurance</td>
+                                <td class="py-4 text-green-600 font-bold text-lg">95%</td>
+                                <td class="py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs italic font-medium">Acceptatie OK</span></td>
+                                <td class="py-4 text-blue-600 cursor-pointer hover:underline text-sm font-semibold">Details checken</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold text-gray-700">Baloise</td>
+                                <td class="py-4 text-yellow-500 font-bold text-lg">65%</td>
+                                <td class="py-4"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs italic font-medium">Preventie vereist</span></td>
+                                <td class="py-4 text-blue-600 cursor-pointer hover:underline text-sm font-semibold">Details checken</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold text-gray-700">AXA</td>
+                                <td class="py-4 text-red-500 font-bold text-lg">10%</td>
+                                <td class="py-4"><span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs italic font-medium">Sector uitsluiting</span></td>
+                                <td class="py-4 text-blue-600 cursor-pointer hover:underline text-sm font-semibold">Waarom niet?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-8 p-4 bg-gray-50 border-l-4 border-blue-500 rounded">
+                    <p class="text-sm text-gray-600 italic">
+                        <strong>AI Inzicht:</strong> "Dit risico (Schrijnwerkerij) wordt door AG geaccepteerd mits er een CO2-blussing aanwezig is in de spuitcabine. Baloise vraagt extra info over het dakoppervlak."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="mt-20 py-6 text-center text-gray-400 text-xs">
+        &copy; 2026 AssurMatch AI - Ontwikkeld voor de moderne makelaar.
+    </footer>
+
 </body>
 </html>
-
